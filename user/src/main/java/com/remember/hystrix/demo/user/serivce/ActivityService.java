@@ -21,7 +21,9 @@ public class ActivityService {
         return stringResponseEntity.getBody();
     }
 
-
+    /**
+     * 可以在HystrixCommandProperties下查找相关配置
+     */
     @HystrixCommand(
             commandProperties = {
                     @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "2000")
